@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passcode Protected Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .passcode-container {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .passcode-input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .passcode-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .passcode-button:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .content {
+            display: none; /* Initially hidden */
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        const correctPasscode = '2402'; // Set your desired passcode here
+
+        function checkPasscode() {
+            const input = document.getElementById('passcodeInput').value;
+            const errorMessage = document.getElementById('errorMessage');
+            const content = document.getElementById('content');
+
+            if (input === correctPasscode) {
+                errorMessage.textContent = '';
+                content.style.display = 'block'; // Show the content
+            } else {
+                errorMessage.textContent = 'Incorrect passcode, please try again. Hint: ❤️🔒_ _ / _ _ ';
+                content.style.display = 'none'; // Hide the content
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="passcode-container">
+        <h2>Enter Passcode</h2>
+        <input id="passcodeInput" class="passcode-input" type="password" placeholder="Enter your passcode">
+        <button class="passcode-button" onclick="checkPasscode()">Submit</button>
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <div id="content" class="content">
+        <h2>Hi Avantikha 🤭🤭</h2>
+        <p>You may proceed to your love letter <a href = misc/jacobandavantikha.html>here</a></p>
+    </div>
+</body>
+</html>

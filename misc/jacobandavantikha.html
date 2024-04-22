@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>I Love You</title>
+    <style>
+        body {
+            background-color: #fbeee0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff6361;
+        }
+        .content {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .image {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+        .retractable-container {
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .retractable-content {
+            overflow: hidden;
+            height: 0;
+            transition: height 0.5s ease;
+        }
+
+        .retractable-button {
+            background-color: #ff6361;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .retractable-button:hover {
+            background-color: #d23b38;
+        }
+    </style>
+    <script>
+        function toggleContent() {
+            const content = document.getElementById('content');
+            const button = document.getElementById('retractableButton');
+
+            // If the content's height is 0, expand it to 100px; otherwise, collapse it.
+            if (content.style.height === '0px' || content.style.height === '') {
+                content.style.height = '4000px'; // Change to desired expanded height
+                button.textContent = 'Close';
+            } else {
+                content.style.height = '0px';
+                button.textContent = 'Click for a surprise ;)';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>💕Happy 2-Month Anniversary💕</h1>
+    <div class="content">
+        <img src="images/IMG_1278.JPG" alt="img error" class="image">
+        <p>To the woman of my dreams,</p>
+        <P>
+            How was your day baby? I hope you had a good time at the art gallery today. Also, I hope you like my gift for you. 
+            Now you can be a little purple jellyfish!!
+        </P>
+        <p>I just wanted to wish you a happy 2 months, my princess. You remain to be the best thing that's ever happened in my life. I am so incredibly lucky to be with such an amazing person.
+            Not only are you the best girlfriend I could have ever asked for, you are also my bestfriend. You are someone I can spend hours talking to, someone who I can laugh with,
+            and also share deep conversations with. 
+            You inspire me to be the best version of myself that I can possibly be, just for you.
+        </p>
+        <p>
+            I look forward to many more months and years with you, my angel. I cherish the love that we have, as it has been so amazing.
+            We have both worked so incredibly hard for our relationship, and rest assured I will work harder to keep this love going.
+            You are so deserving of all the love in the world. 
+        </p>
+        <p>
+            From your forever love, Jacob
+        </p>
+        <button id="retractableButton" class="retractable-button" onclick="toggleContent()">Click for a surprise ;)</button>
+        <div id="content" class="retractable-content">
+            <p><img src="images/IMG_0997.JPG" alt="img error" class="image"> look! its lil maurice and big mauricio</p>
+            <p><img src="images/IMG_1589.PNG" alt="img error" class="image">when we smelled like each other :)</p>
+            <p><img src="images/IMG_1102.JPG" alt="img error" class="image"></p>
+            <p><img src="images/IMG_1446.PNG" alt="img error" class="image">matching fits to uni!! how cute <3</p>
+            <p><img src="images/IMG_1684.JPG" alt="img error" class="image">10/10 pizza</p>
+            <P></P>
+            
+            
+        </div>
+    </div>
+
+</body>
+</html>
